@@ -58,7 +58,7 @@ sudo add-apt-repository ppa:chris-lea/redis-server
 # リポジトリを登録
 sudo sh -c 'echo "deb http://apt.postgresql.org/pub/repos/apt $(lsb_release -cs)-pgdg main" > /etc/apt/sources.list.d/pgdg.list'
 
-# 鍵を登録#postgresql-13
+# 鍵を登録
 wget --quiet -O - https://www.postgresql.org/media/keys/ACCC4CF8.asc | sudo apt-key add -
 ```
 
