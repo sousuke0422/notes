@@ -14,4 +14,34 @@
 ## 手順
 ※問題は起きないはずですがバックアップをおすすめします。
 
-todo
+### 1.リーモートをいじる
+※gitが必要ですが、入っているはずなのでインストールは省きます。
+
+```sh
+git remote remove origin
+
+git remote add origin https://github.com/TeamOrangeServer/misskey.git
+```
+
+### 2.ブランチを切り替える。
+```sh
+git fetch origin
+
+git checkout v11-lts
+```
+
+### 3.日頃のバージョンアップと同じ手順
+ここまで来れば後はかんたんです。
+
+```sh
+git pull
+
+yarn install
+
+NODE_ENV=production yarn build
+
+yarn migrate
+```
+
+あとはmisskeyを再起動するだけです。
+お疲れさまでした。
